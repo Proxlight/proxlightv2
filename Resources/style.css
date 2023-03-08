@@ -1,0 +1,286 @@
+@font-face {
+  font-family: "SF Pro Display";
+  src: url('Fonts/SF-Pro-Text-Semibold.otf');
+}
+
+* {
+  transition: 0.5s;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  transition: 0.5s;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+}
+
+.main-preloader {
+  margin: 0 auto;
+  position: fixed;
+  z-index: 9999;
+  background: linear-gradient(#fc2561,#d823e7);
+  width: 100%;
+  height: 100%;
+}
+
+.preloader-logo {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.4);
+  height: 100vh;
+  animation: anim 2.5s ease-in-out;
+}
+
+@keyframes anim {
+  0% {
+    transform: scale(0.4);
+  }
+
+  50% {
+    transform: scale(0.6);
+  }
+
+  100% {
+    transform: scale(0.4);
+  }
+}
+
+
+#blue-shape {
+  position: absolute;
+  transform: scale(0.6);
+  top: 90px;
+  left: -161px;
+}
+
+#purple-shape {
+  position: absolute;
+  transform: scale(0.6);
+  right: -99px;
+  top: -131px;
+}
+
+.box {
+  margin: 0 auto;
+  transform: translateY(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f6f0f0;
+  opacity: 0.5;
+  width: 500px;
+  height: 44px;
+  border-radius: 10px;
+  top: 26px;
+  right: 400px;
+}
+
+.blur {
+  position: absolute;
+  width: 500px;
+  height: 44px;
+  top: 26px;
+  right: 400px;
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border:  1px solid rgba(255,255,255,0.2);
+  z-index: -1;
+}
+
+.Home, .Services,
+.Resources, .Article,
+.Apps {
+  font-family: SF Pro Display;
+  font-weight: bold;
+  color: #000;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.navbar a {
+  margin: 0;
+  padding-top: 20px;
+  transform: translateY(10px);
+}
+
+.text a {
+  transform: translateY(0px);
+}
+
+.banner-text {
+  transform: translateY(10px);
+}
+
+.frame {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 590px;
+  height: 408px;
+  right: 358px;
+  top: 100px;
+  background: rgb(244 233 233 / 40%);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 5px solid rgba(255,255,255,0.2);
+  transform: translateY(100px) scale(1.1);
+}
+
+.wrapper{
+  margin: 0 auto;
+  transform: translateY(-50px) scale(0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tagline {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: SF Pro Display;
+  font-size: 20px;
+  color: #1E1E1E;
+  opacity: 0.7;
+  font-weight: 500;
+  width: 500px;
+  transform: translateY(-192px);
+}
+
+.links {
+  position: absolute;
+  left: -27px;
+}
+
+.channel {
+  position: absolute;
+  width: 616px;
+  height: 408px;
+  top: -5px;
+  right: -20px;
+  transform: scale(0.8);
+  z-index: -1;
+}
+
+.logo img {
+  position: absolute;
+  transform: translate(215px,-22px) scale(0.6);
+}
+
+.button-box {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#FF006B,#FF70D7);
+  width: 140px;
+  height: 60px;
+  border-radius: 8px;
+  transform: translateX(300px);
+}
+
+.button-box a {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: SF Pro Display;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.dark-mode {
+  transition: 0.5s;
+}
+
+.dark-mode body {
+  background: #323232;
+}
+
+.dark-mode .tagline-text {
+  color: #fff;
+  font-weight: 100;
+  opacity: 1;
+}
+
+.dark-mode .box {
+  background: #474747;
+}
+
+.dark-mode .blur{
+  background: #323232;
+  border: #323232;
+}
+
+.dark-mode .frame {
+  background: #323232;
+  border: 5px solid rgba(255,255,255,0.2);
+}
+
+.dark-mode .banner-text h1 {
+  color: #fff;
+}
+
+.dark-mode a {
+  color: #fff;
+}
+
+
+@media screen and (/*max-width: 320px*/ orientation: portrait) {
+  .preloader-logo {
+    height: 180vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @keyframes anim {
+    0% {
+      transform: scale(0.4);
+    }
+
+    50% {
+      transform: scale(0.6);
+    }
+
+    100% {
+      transform: scale(0.4);
+    }
+  }
+
+  .main-preloader {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .frame {
+    transform: translate(100px,100px) scale(0.9);
+  }
+
+  .channel {
+    right: -60px;
+  }
+
+  .links {
+    transform: translateX(-50px);
+  }
+
+  #blue-shape {
+    position: absolute;
+    height: 500px;
+    transform: translate(230px, 325px) scale(0.4)!important;
+  }
+}

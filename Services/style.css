@@ -1,0 +1,246 @@
+@font-face {
+  font-family: "SF Pro Display";
+  src: url('Fonts/SF-Pro-Text-Semibold.otf');
+}
+
+* {
+  transition: 0.5s;
+  box-sizing: border-box;
+}
+
+:root {
+  transition: 0.5s;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+}
+
+.main-preloader {
+  margin: 0 auto;
+  position: fixed;
+  z-index: 9999;
+  background: linear-gradient(#fc2561,#d823e7);
+  width: 100%;
+  height: 100%;
+}
+
+.preloader-logo {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.4);
+  height: 100vh;
+  animation: anim 2.5s ease-in-out;
+  }
+
+@keyframes anim {
+  0% {
+    transform: scale(0.4);
+  }
+
+  50% {
+    transform: scale(0.6);
+  }
+
+  100% {
+    transform: scale(0.4);
+  }
+}
+
+
+#Green-Shape {
+  position: absolute;
+  left: 794px;
+  bottom: -32px;
+  transform: scale(0.8);
+}
+
+#Pink-Shape {
+  position: absolute;
+  transform: scale(0.5);
+  left: -9px;
+  bottom: -35px;
+}
+
+.box {
+  margin: 0 auto;
+  transform: translateY(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f6f0f0;
+  opacity: 0.5;
+  width: 500px;
+  height: 44px;
+  border-radius: 10px;
+  top: 26px;
+  right: 400px;
+}
+
+.Home, .Services, 
+.Resources, .Article, 
+.Apps {
+  font-family: SF Pro Display;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.navbar a {
+  margin: 0;
+  padding-top: 20px;
+  transform: translateY(10px);
+}
+
+.text {
+  transform: translateY(0px);
+}
+
+.frame {
+  margin: 0 auto;
+  transform: translateY(20px) scale(0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 656px;
+  height: 430px;
+  background: rgb(244 233 233 / 40%);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 5px solid rgba(255,255,255,0.2);
+}
+
+.app-dev-text {
+  position: absolute;
+  font-family: SF Pro Display;
+  font-size: 20px;
+  left: 80px;
+  top: 5px;
+  background: linear-gradient(45deg, #571CFF, #12FFAA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.web-dev-text {
+  position: absolute;
+  font-family: SF Pro Display;
+  font-size: 20px;
+  right: 86px;
+  top: 5px;
+  background: linear-gradient(45deg, #DB00FF, #17D5FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+
+.app-dev {
+  position: absolute;
+  top: 61px;
+  right: 336px;
+  width: 305px;
+  height: 345px;
+}
+
+.web-dev {
+  position: absolute;
+  top: 61px;
+  right: 10px;
+  width: 301px;
+  height: 345px;
+}
+
+.dark-mode {
+  transition: 0.5s;
+}
+
+.dark-mode body {
+  background: #323232;
+}
+
+.dark-mode .tagline-text {
+  color: #fff;
+  font-weight: 100;
+  opacity: 1;
+}
+
+.dark-mode .box {
+  background: #474747;
+}
+
+.dark-mode .blur {
+  background: #323232;
+  border: #323232;
+}
+
+.dark-mode .frame{
+  background: #323232;
+}
+
+.dark-mode a {
+  color: #fff;
+}
+
+
+@media screen and (/*max-width: 320px*/ orientation: portrait) {
+  .preloader-logo {
+    height: 180vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @keyframes anim {
+    0% {
+      transform: scale(0.4);
+    }
+
+    50% {
+      transform: scale(0.6);
+    }
+
+    100% {
+      transform: scale(0.4);
+    }
+  }
+
+  .main-preloader {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #Pink-Shape {
+    transform: translateX(-348.6667px)!important;
+  }
+
+  #Green-Shape {
+    transform: scale(1.0) translateX(-525.5333px) translateY(190px)!important;
+  }
+
+  .box {
+    transform: translate(370px,90px) scale(2.3);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }  
+
+  .frame {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(310px,580px) scale(1.8);
+  }
+
+}

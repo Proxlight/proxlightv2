@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Services</title>
+</head>
+<body>
+	<div class="main-preloader">
+		<img src="Assets/Proxlight Logo.png" alt="" class="preloader-logo">
+	</div>
+
+	<div class="background">
+		<img data-speed="-5" src="Assets/Pink Shape.png" id="Pink-Shape" class="Shape">
+		<img data-speed="5" src="Assets/Green Shape.png" id="Green-Shape" class="Shape">
+	</div>
+
+	<div class="navbar">
+		<div class="box" align="center">
+			<div class="text">	
+				<a href="../Home/index.html" class="Home">Home</a>
+				<a href="#" class="Services">Services</a>
+				<a href="../Resources/index.html" class="Resources">Resources</a>
+				<a href="https://proxlight.hashnode.dev/" class="Article">Article</a>
+				<a href="https://proxlightapps.gumroad.com/" class="Apps">Apps</a>
+			</div>
+		</div>
+		<div class="blur"></div>
+	</div>
+
+	<div class="content">
+		<div class="frame">
+			<div class="container1">
+				<h1 class="app-dev-text">App Development</h1>
+				<img src="Assets/App Development.png" alt="" class="app-dev">
+			</div>
+
+			<div class="container2">
+				<h1 class="web-dev-text">Web Development</h1>
+				<img src="Assets/Web Development.png" alt="" class="web-dev">
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+	<script type="text/javascript">
+		
+document.onkeypress = function(e){
+	e = e || window.event;
+
+	if(e.keyCode === 13){
+		document.documentElement.classList.toggle('dark-mode')
+	}
+}
+	</script>
+	<script type="text/javascript">
+		setTimeout(function(){
+			$(".main-preloader").fadeToggle();
+		}, 2500);
+
+	</script>
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</body>
+</html>

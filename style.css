@@ -1,0 +1,261 @@
+@font-face {
+  font-family: "SF Pro Display";
+  src: url('Fonts/SF-Pro-Text-Semibold.otf');
+}
+
+* {
+  transition: 0.5s;
+}
+
+:root {
+  transition: 0.5s;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+}
+
+.main-preloader {
+  margin: 0 auto;
+  position: fixed;
+  z-index: 9999;
+  background: linear-gradient(#fc2561,#d823e7);
+  width: 100%;
+  height: 100%;
+}
+
+.preloader-logo {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.4);
+  height: 100vh;
+  animation: anim 2.5s ease-in-out;
+  }
+
+@keyframes anim {
+  0% {
+    transform: scale(0.4);
+  }
+
+  50% {
+    transform: scale(0.6);
+  }
+
+  100% {
+    transform: scale(0.4);
+  }
+}
+
+.hero-text {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: SF Pro Display;
+  font-size: 100px;
+  height: 87vh;
+  background: linear-gradient(90deg,#fc2561,#d823e7 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.tagline-text {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 50vh;
+  font-family: SF Pro Display;
+  font-weight: 100;
+  font-size: 20px;
+  color: #1E1E1E;
+  opacity: 0.6;
+  transform: translateY(-20px);
+}
+
+#green-shape {
+  position: absolute;
+  transform: scale(0.5);
+  left: 857px;
+  top: 214px;
+}
+
+#orange-shape {
+  position: absolute;
+  transform: scale(0.5);
+  left: -71px;
+  top: -82px;
+}
+
+#blue-shape {
+  position: absolute;
+  transform: scale(0.5);
+  left: -15px;
+  top: 261px;
+}
+
+#purple-shape {
+  position: absolute;
+  transform: scale(0.5);
+  left: 55px;
+  top: -83px;
+}
+
+#pink-shape {
+  position: absolute;
+  transform: scale(0.5);
+  right: 70px;
+  top: -71px;
+}
+
+.box {
+  margin: 0 auto;
+  transform: translateY(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f6f0f0;
+  opacity: 0.5;
+  width: 500px;
+  height: 44px;
+  top: 26px;
+  border-radius: 10px;
+}
+
+.text {
+  transform: translateY(0px);
+}
+
+.navbar a {
+  margin: 0px;
+  padding-top: 20px;
+  transform: translateY(10px);
+}
+
+.Home,
+.Services,
+.Resources,
+.Article,
+.Apps {
+  font-family: SF Pro Display;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.dark-mode {
+  transition: 0.5s;
+}
+
+.dark-mode body {
+  background: #323232;
+}
+
+.dark-mode .tagline-text {
+  color: #fff;
+  font-weight: 100;
+  opacity: 1;
+}
+
+.dark-mode .box {
+  background: #474747;
+}
+
+.dark-mode .blur {
+  background: #323232;
+  border: #323232;
+}
+
+.dark-mode a {
+  color: #fff;
+}
+
+
+
+@media screen and (/*max-width: 320px*/ orientation: portrait) {
+  .preloader-logo {
+    height: 180vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @keyframes anim {
+    0% {
+      transform: scale(0.4);
+    }
+
+    50% {
+      transform: scale(0.6);
+    }
+
+    100% {
+      transform: scale(0.4);
+    }
+  }
+
+  .main-preloader {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box {
+    transform: translate(340px,49px) scale(2.0);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-text {
+    margin: 0 auto;
+    transform: translateY(145%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240vh;
+    font-size: 200px;
+  }
+
+  .tagline-text {
+    margin: 0 auto;
+    transform: translate(0%,220vh);
+    font-size: 60px;
+    width: 237vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  #green-shape {
+    transform: translate(-162px,63em) scale(1.2)!important;
+    z-index: -1;
+    backdrop-filter: blur(10px);
+  }
+
+  #blue-shape {
+    transform: translate(-56px,64rem) scale(1.5)!important;
+  }
+
+  #pink-shape,
+  #orange-shape {
+    display: none;
+  }
+
+  #purple-shape {
+    transform: translate(-100px,3rem) scale(1.5)!important;
+    width: 500px;
+    z-index: -1;
+    backdrop-filter: blur(50px);
+  }
+}
+
